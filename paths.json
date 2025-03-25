@@ -1,8 +1,8 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json",
-    "/content/aem-boilerplate/metadata:/metadata.json"
+    "/content/kyndryl-eds/:/",
+    "/content/kyndryl-eds/configuration:/.helix/config.json",
+    "/content/kyndryl-eds/metadata:/metadata.json"
   ],
   "includes": [
     "/content/aem-boilerplate/"
