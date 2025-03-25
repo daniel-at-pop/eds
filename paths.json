@@ -5,6 +5,6 @@
     "/content/kyndryl-eds/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/kyndryl-eds/"
   ]
 }
