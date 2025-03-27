@@ -171,8 +171,15 @@
       {
         "component": "reference",
         "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
         "name": "image",
-        "label": "Image",
+        "label": "Background Image",
         "multi": false
       },
       {
@@ -180,6 +187,13 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
         "value": ""
       },
       {
