@@ -1,0 +1,12 @@
+
+// Disabled for Shidoka Phase 1 implementation (KYNDRYL-1132)
+// Phase 1 scopes typography to rich text component only.
+// Phase 2 implements all styles globally.
+
+@use 'typography.scss';
+@use 'grid.scss';
+@use 'aspect-ratios.scss';
+@use 'layout.scss';
+@use 'spacing.scss';
+@use 'visibility.scss';
+@use 'component-palettes.scss';

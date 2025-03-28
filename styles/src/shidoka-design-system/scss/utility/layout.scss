@@ -1,0 +1,41 @@
+@use '../mixins/layout.scss';
+
+//body {
+//	padding-top: var(--kd-header-height);
+//	transition: padding-top var(--kd-header-animation);
+//	width: 100%;
+//
+//	* {
+//		scroll-margin-top: var(--kd-header-height);
+//	}
+//}
+
+//.aem-GridColumn {
+//	float: none !important;
+//}
+
+.xf-content-height {
+	margin: 0 !important;
+	min-height: 0 !important;
+}
+
+//.base-content-container, //exists in legacy styles
+.kd-layout__content-container {
+	@include layout.content-container;
+}
+
+.no-scroll {
+	height: 100dvh;
+	overflow: hidden;
+	position: fixed;
+}
+
+.kd-layout__object-fit {
+	&--cover {
+		@include layout.object-fit('cover');
+	}
+
+	&--contain {
+		@include layout.object-fit('contain');
+	}
+}

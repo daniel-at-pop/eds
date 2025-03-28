@@ -1,0 +1,35 @@
+@use '../mixins/spacing.scss';
+@use '../variables/spacing.scss' as spacingVariables;
+
+// generate padding classes
+@each $direction in spacingVariables.$spacingDirections {
+	@each $space in spacingVariables.$spacingInPixels {
+		.kd-spacing--padding-#{$direction}-#{$space} {
+			@include spacing.spacer('padding', $direction, $space);
+		}
+	}
+}
+
+// generate margin classes
+@each $direction in spacingVariables.$spacingDirections {
+	@each $space in spacingVariables.$spacingInPixels {
+		.kd-spacing--margin-#{$direction}-#{$space} {
+			@include spacing.spacer('margin', $direction, $space);
+		}
+	}
+}
+
+.kd-spacing--page-gutter {
+	@include spacing.page-gutter;
+}
+
+// default component margin bottom
+.kd-spacing--component-margin-bottom {
+	margin-bottom: var(--kd-spacing-component-margin-bottom);
+}
+
+// default component padding block
+.kd-spacing--component-padding-block {
+	padding-bottom: var(--kd-spacing-component-padding-bottom);
+	padding-top: var(--kd-spacing-component-padding-top);
+}

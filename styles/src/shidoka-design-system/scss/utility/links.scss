@@ -1,0 +1,92 @@
+// Disabled for Shidoka Phase 1 implementation (KYNDRYL-1132)
+//
+// a,
+.kd-link {
+	align-items: center;
+	color: var(--kd-color-text-link);
+	cursor: pointer;
+	display: inline-flex;
+	font-family: var(--kd-font-family-secondary);
+	font-weight: var(--kd-font-weight-regular);
+	gap: var(--kd-spacing-4);
+	position: relative;
+	text-decoration: none;
+	transition: color 300ms ease-in-out;
+
+	&:hover {
+		color: var(--kd-color-text-link-hover);
+		text-decoration: underline;
+	}
+
+	&:focus {
+		color: var(--kd-color-text-tertiary);
+		outline: 1px solid var(--kd-color-border-focus);
+		transition: outline 100ms ease-in-out;
+		text-decoration: none;
+	}
+
+	&:active {
+		color: var(--kd-color-text-pressed);
+		text-decoration: underline;
+		outline: none;
+	}
+
+	&.kd-link--animate-icon {
+		.kd-svg-icon {
+			transition: transform 300ms ease-in-out;
+		}
+
+		&:hover {
+			.kd-svg-icon {
+				transform: translateX(4px);
+			}
+		}
+	}
+
+	// Link disable class
+	&.kd-link-disabled {
+		color: var(--kd-color-darkstone-40);
+		cursor: not-allowed;
+		border: none;
+		outline: none;
+		pointer-events: none;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			color: var(--kd-color-darkstone-40);
+			border: none;
+			outline: none;
+			text-decoration: none;
+
+			.kd-svg-icon {
+				transform: none;
+				transition: none;
+			}
+		}
+	}
+}
+
+// Secondary (web)
+.kd-link-secondary {
+	@extend .kd-link;
+	color: var(--kd-color-text-primary);
+
+	&:hover {
+		color: var(--kd-color-text-primary-hover);
+	}
+
+	&:focus {
+		outline: 1px solid var(--kd-color-border-focus);
+		transition: outline 100ms ease-in-out;
+		text-decoration: none;
+	}
+
+	&:active {
+		color: var(--kd-color-text-primary-pressed);
+		text-decoration: underline;
+		outline: none;
+	}
+}

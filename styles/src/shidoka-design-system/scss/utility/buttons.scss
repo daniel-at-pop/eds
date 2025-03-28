@@ -1,0 +1,369 @@
+@use '../mixins/typography.scss';
+
+// Base Button Styles
+.kd-btn {
+	@include typography.type-body-02;
+	align-items: center;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-flex;
+	gap: var(--kd-spacing-8);
+	height: 48px;
+	justify-content: center;
+	max-width: 100%;
+	min-width: 96px;
+	outline-offset: 2px;
+	outline: 2px solid transparent;
+	padding: 12px 16px;
+	text-decoration: none;
+	transition: outline-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+
+	&.icon-only {
+		min-width: initial;
+	}
+
+	&--small {
+		height: 32px;
+		padding: 4px 16px;
+
+		&.icon-only {
+			padding: 6px;
+			width: 32px;
+		}
+	}
+
+	&--medium {
+		height: 48px;
+		padding: 12px 16px;
+
+		&.icon-only {
+			padding: 14px;
+			width: 48px;
+		}
+	}
+
+	&--large {
+		height: 56px;
+		padding: 16px 16px;
+
+		&.icon-only {
+			padding: 18px;
+			width: 56px;
+		}
+	}
+
+	span,
+	svg {
+			align-items: center;
+			display: flex;
+			position: relative;
+			z-index: 1;
+	}
+}
+
+// Disabled Button Styles
+@mixin kd-btn-disabled {
+	background-color: var(--kd-color-background-disabled);
+	border: none;
+	color: var(--kd-color-text-inversed);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+@mixin kd-btn-focus {
+	outline-color: var(--kd-color-border-focus);
+}
+
+// Primary Button Styles (Web & App)
+.kd-btn--primary-web,
+.kd-btn--primary-app {
+	@extend .kd-btn;
+	background-color: var(--kd-color-background-primary);
+	border: none;
+	color: var(--kd-color-text-inversed);
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		background-color: var(--kd-color-background-primary-hover);
+		bottom: 0;
+		content: '';
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform-origin: left;
+		transform: scaleX(0);
+		transition: transform 300ms ease-out, opacity 200ms ease-out, background-color 150ms ease-in-out;
+	}
+
+	&:hover {
+		color: var(--kd-color-text-inversed);
+
+		&:before {
+			opacity: 1;
+			transform: scaleX(1);
+		}
+	}
+
+	&:active {
+		border: none;
+		color: var(--kd-color-text-inversed);
+
+		&:before {
+			background-color: var(--kd-color-background-primary-pressed);
+		}
+	}
+
+	&:focus {
+		@include kd-btn-focus;
+		color: var(--kd-color-text-inversed);
+	}
+
+	&:disabled {
+		@include kd-btn-disabled;
+		color: var(--kd-color-text-inversed);
+	}
+}
+
+.kd-btn--primary-web {
+	background-color: var(--kd-color-background-secondary);
+
+	&:before {
+		background-color: var(--kd-color-background-secondary-hover);
+	}
+
+	&:active:before {
+		background-color: var(--kd-color-background-secondary-pressed);
+	}
+}
+
+// Primary Destructive Button
+.kd-btn--primary-app-destructive,
+.kd-btn--primary-web-destructive {
+	@extend .kd-btn;
+	background-color: var(--kd-color-background-destructive);
+	border: none;
+	color: var(--kd-color-text-inversed);
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		background-color: var(--kd-color-background-destructive-hover);
+		bottom: 0;
+		content: '';
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform-origin: left;
+		transform: scaleX(0);
+		transition: transform 300ms ease-out, opacity 200ms ease-out, background-color 150ms ease-in-out;
+	}
+
+	&:hover {
+		&:before {
+			opacity: 1;
+			transform: scaleX(1);
+		}
+	}
+
+	&:active:before {
+		background-color: var(--kd-color-background-destructive-pressed);
+	}
+
+	&:focus {
+		@include kd-btn-focus;
+	}
+
+	&:disabled {
+		@include kd-btn-disabled;
+	}
+}
+
+// Secondary Button Styles
+.kd-btn--secondary {
+	@extend .kd-btn;
+	background-color: var(--kd-color-transparent);
+	border: 1px solid var(--kd-color-border-primary);
+	color: var(--kd-color-text-primary);
+
+	&:hover {
+		background-color: var(--kd-color-background-secondary-hover);
+		border-color: var(--kd-color-background-secondary-hover);
+		color: var(--kd-color-text-inversed);
+	}
+
+	&:active {
+		background-color: var(--kd-color-background-secondary-pressed);
+		border-color: var(--kd-color-border-primary);
+		color: var(--kd-color-text-inversed);
+	}
+
+	&:focus {
+		@include kd-btn-focus;
+	}
+
+	&:disabled {
+		@include kd-btn-disabled;
+		background-color: var(--kd-color-transparent);
+		border: 1px solid var(--kd-color-border-disabled);
+		color: var(--kd-color-text-disabled);
+	}
+}
+
+// Secondary Destructive Button
+.kd-btn--secondary-destructive {
+	@extend .kd-btn--secondary;
+	border-color: var(--kd-color-border-destructive);
+	color: var(--kd-color-text-destructive);
+
+	&:hover,
+	&:active {
+		background-color: var(--kd-color-background-destructive-hover);
+		border-color: transparent;
+		color: var(--kd-color-text-inversed);
+	}
+}
+
+// Secondary Overlay Button (video play buttons)
+.kd-btn--secondary-overlay {
+	@extend .kd-btn--secondary;
+	background-color: color-mix(in srgb, var(--kd-color-darkstone-80) 50%, transparent);
+	border-color: var(--kd-color-cloud-10);
+	color: var(--kd-color-neutral-white);
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: var(--kd-color-darkstone-60);
+		border-color: var(--kd-color-cloud-10);
+		color: var(--kd-color-neutral-white);
+	}
+}
+
+// Tertiary Button Styles
+.kd-btn--tertiary {
+	@extend .kd-btn;
+	background-color: var(--kd-color-transparent);
+	border: none;
+	color: var(--kd-color-text-tertiary);
+	min-width: initial;
+
+	&:hover,
+	&:active {
+		background-color: var(--kd-color-background-accent-subtle);
+	}
+
+	&:active {
+		color: var(--kd-color-text-tertiary-bold);
+	}
+
+	&:focus {
+		@include kd-btn-focus;
+	}
+
+	&:disabled {
+		@include kd-btn-disabled;
+		background-color: var(--kd-color-transparent);
+		color: var(--kd-color-text-disabled);
+	}
+}
+
+// Tertiary Destructive Button
+.kd-btn--tertiary-destructive {
+	@extend .kd-btn--tertiary;
+	color: var(--kd-color-text-destructive);
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--kd-color-text-destructive);
+	}
+}
+
+// Reverse the flex direction to place the icon to the left
+.kd-btn--icon-left {
+	flex-direction: row-reverse;
+}
+
+
+//** Custom / One-off Button Styles **//
+
+// used in Video v2
+.kd-btn--video-play {
+	@extend .kd-btn--secondary;
+	background-color: color-mix(in srgb, var(--kd-color-darkstone-80) 50%, transparent);
+	border: 0;
+	border-radius: 50%;
+	color: var(--kd-color-neutral-white);
+	height: 60px;
+	min-width: initial;
+	padding: 0;
+	width: 60px;
+
+	.kd-svg-icon {
+		height: 100%;
+		width: 100%;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: var(--kd-color-darkstone-60);
+		color: var(--kd-color-neutral-white);
+	}
+}
+
+.kd-btn--social-icon {
+	@extend .kd-btn;
+	background: none;
+	border: 0;
+	border-radius: 0;
+	color: var(--kd-color-text-primary);
+	height: 24px;
+	min-width: initial;
+	padding: 0;
+	width: 24px;
+
+	&:hover,
+	&:focus {
+		color: var(--kd-color-text-primary-hover);
+	}
+
+	.kd-svg-icon {
+		height: 24px;
+		width: 24px;
+	}
+}
+
+.kd-btn--video-control {
+	@extend .kd-btn;
+	background: var(--kd-color-neutral-white);
+	border: 0;
+	border-radius: 0;
+	color: var(--kd-color-text-primary);
+	height: 32px;
+	min-width: initial;
+	padding: 4px;
+	width: 32px;
+
+	&:hover,
+	&:focus {
+		color: var(--kd-color-text-primary-hover);
+	}
+
+	.kd-svg-icon {
+		height: 24px;
+		width: 24px;
+	}
+}

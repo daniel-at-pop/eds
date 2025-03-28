@@ -1,0 +1,171 @@
+@use '../mixins/typography.scss';
+
+// Disabled for Shidoka Phase 1 implementation (KYNDRYL-1132)
+//
+// body {
+// 	@include typography.type-body-02;
+// 	min-height: 100vh;
+// 	background: var(--kd-color-background-ui-default);
+// 	color: var(--kd-color-text-primary);
+// }
+
+// h1 {
+// 	@include typography.type-headline-03;
+// }
+
+// h2 {
+// 	@include typography.type-headline-05;
+// 	margin-bottom: 24px;
+// }
+
+// h3 {
+// 	@include typography.type-headline-07;
+// 	margin-bottom: 24px;
+// }
+
+// h4, h5, h6 {
+// 	@include typography.type-body-01;
+// 	margin-bottom: 24px;
+// }
+
+// p {
+// 	margin-bottom: 24px;
+// }
+
+// ul, ol {
+// 	margin: 0 0 24px 2em;
+// 	padding: 0;
+// }
+
+// ul {
+// 	list-style-type: '–  ';
+// }
+
+// li {
+// 	margin: 0 0 8px;
+// 	padding: 0;
+// }
+
+.kd-type--hero-01 {
+	@include typography.type-hero-01;
+}
+
+.kd-type--hero-02 {
+	@include typography.type-hero-02;
+}
+
+.kd-type--hero-03 {
+	@include typography.type-hero-03;
+}
+
+.kd-type--hero-04 {
+	@include typography.type-hero-04;
+}
+
+.kd-type--display-01 {
+	@include typography.type-display-01;
+}
+
+.kd-type--display-02 {
+	@include typography.type-display-02;
+}
+
+.kd-type--display-03 {
+	@include typography.type-display-03;
+}
+
+.kd-type--headline-01 {
+	@include typography.type-headline-01;
+}
+
+.kd-type--headline-02 {
+	@include typography.type-headline-02;
+}
+
+.kd-type--headline-03 {
+	@include typography.type-headline-03;
+}
+
+.kd-type--headline-04 {
+	@include typography.type-headline-04;
+}
+
+.kd-type--headline-05 {
+	@include typography.type-headline-05;
+}
+
+.kd-type--headline-06 {
+	@include typography.type-headline-06;
+}
+
+.kd-type--headline-07 {
+	@include typography.type-headline-07;
+}
+
+.kd-type--headline-08 {
+	@include typography.type-headline-08;
+}
+
+.kd-type--body-01 {
+	@include typography.type-body-01;
+}
+
+.kd-type--body-02 {
+	@include typography.type-body-02;
+}
+
+.kd-type--ui-01 {
+	@include typography.type-ui-01;
+}
+
+.kd-type--ui-02 {
+	@include typography.type-ui-02;
+}
+
+.kd-type--ui-03 {
+	@include typography.type-ui-03;
+}
+
+.kd-type--ui-04 {
+	@include typography.type-ui-04;
+}
+
+.kd-type--ui-05 {
+	@include typography.type-ui-05;
+}
+
+// Font-weight classes
+
+.kd-type--weight-ultralight {
+	font-weight: var(--kd-font-weight-ultralight);
+}
+
+.kd-type--weight-light {
+	font-weight: var(--kd-font-weight-light);
+}
+
+.kd-type--weight-regular {
+	font-weight: var(--kd-font-weight-regular);
+}
+
+.kd-type--weight-medium {
+	font-weight: var(--kd-font-weight-medium);
+}
+
+.kd-type--weight-bold {
+	font-weight: var(--kd-font-weight-bold);
+}
+
+// Custom (not Shidoka) text accent-color classes
+
+.kd-type--accent-color-primary {
+	color: var(--kd-color-text-accent-primary);
+}
+
+.kd-type--accent-color-secondary {
+	color: var(--kd-color-text-accent-secondary);
+}
+
+.kd-type--accent-color-tertiary {
+	color: var(--kd-color-text-accent-tertiary);
+}

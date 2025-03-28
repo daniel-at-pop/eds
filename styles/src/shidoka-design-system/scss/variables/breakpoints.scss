@@ -1,0 +1,31 @@
+$bp-sm: 320px;
+$bp-sm-max: 671px;
+$bp-md: 672px;
+$bp-md-max: 1183px;
+$bp-lg: 1184px;
+$bp-lg-max: 1311px;
+$bp-xl: 1312px;
+$bp-xl-max: 1583px;
+$bp-max: 1584px;
+// $bp-screen-max matches legacy $screen-xxlarge
+$bp-screen-max: 2500px;
+
+:root {
+	--kd-current-breakpoint: sm;
+
+	@media (min-width: $bp-md) {
+		--kd-current-breakpoint: md;
+	}
+
+	@media (min-width: $bp-lg) {
+		--kd-current-breakpoint: lg;
+	}
+
+	@media (min-width: $bp-xl) {
+		--kd-current-breakpoint: xl;
+	}
+
+	@media (min-width: $bp-max) {
+		--kd-current-breakpoint: max;
+	}
+}

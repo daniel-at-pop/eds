@@ -1,0 +1,35 @@
+@use '../mixins/typography.scss';
+
+.kd-tag {
+	@include typography.type-ui-03;
+	align-items: center;
+	background: var(--kd-color-background-inverse-hover);
+	border-radius: 1em;
+	border: 0;
+	color: var(--kd-color-text-primary);
+	cursor: pointer;
+	display: inline-flex;
+	gap: var(--kd-spacing-8);
+	margin: 0;
+	outline-offset: 2px;
+	outline: 2px solid transparent;
+	padding: var(--kd-spacing-4) var(--kd-spacing-8);
+	transition: outline-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+	&:hover {
+		background: var(--kd-color-background-primary);
+		color: var(--kd-color-text-inversed);
+
+		.kd-svg-icon {
+			fill: var(--kd-color-text-inversed);
+		}
+	}
+
+	&:focus {
+		outline-color: var(--kd-color-border-focus);
+	}
+
+	.kd-svg-icon {
+		fill: var(--kd-color-text-primary);
+	}
+}

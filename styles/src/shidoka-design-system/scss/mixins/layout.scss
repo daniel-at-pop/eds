@@ -1,0 +1,19 @@
+@use '../mixins/spacing.scss';
+
+// Content container
+@mixin content-container {
+	@include spacing.page-gutter;
+	margin: 0 auto;
+	max-width: var(--kd-grid-max-width);
+	position: relative;
+	width: 100%;
+}
+
+// Object fit
+@mixin object-fit($fit: 'cover') {
+	display: block;
+	height: 100%;
+	object-fit: #{$fit};
+	object-position: 50% 50%;
+	width: 100%;
+}

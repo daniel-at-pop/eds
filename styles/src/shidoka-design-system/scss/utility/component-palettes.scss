@@ -1,0 +1,86 @@
+@use '../mixins/component-palettes.scss';
+
+.kd-component-palette--white {
+	@include component-palettes.white;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--darkstone {
+	@include component-palettes.darkstone;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--spruce-dark {
+	@include component-palettes.spruce-dark;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--spruce {
+	@include component-palettes.spruce;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--darkgreen {
+	@include component-palettes.darkgreen;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--lightgreen {
+	@include component-palettes.lightgreen;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--warmred {
+	@include component-palettes.warmred;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--skye {
+	@include component-palettes.skye;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--cloud {
+	@include component-palettes.cloud;
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+
+// custom extended Shidoka themes //
+
+.kd-component-palette--darkstone-10 {
+	@extend .kd-component-palette--cloud;
+	--kd-color-background-ui-default: var(--kd-color-darkstone-10);
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--webgray {
+	@extend .kd-component-palette--cloud;
+	--kd-color-background-ui-default: var(--kd-color-webgray);
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--warmgray {
+	@extend .kd-component-palette--cloud;
+	--kd-color-background-ui-default: var(--kd-color-warmgray-10);
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+.kd-component-palette--coolgray {
+	@extend .kd-component-palette--cloud;
+	--kd-color-background-ui-default: var(--kd-color-coolgray-10);
+	background-color: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}

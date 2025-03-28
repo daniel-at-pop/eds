@@ -1,0 +1,94 @@
+/* import roboto from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
+
+/* include everett fonts locally */
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-Ultralight-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-Ultralight-web.woff) format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-UltralightItalic-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-UltralightItalic-web.woff) format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-Light-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-Light-web.woff) format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-LightItalic-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-LightItalic-web.woff) format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-Regular-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-Regular-web.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-RegularItalic-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-RegularItalic-web.woff) format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-Medium-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-Medium-web.woff) format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-MediumItalic-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-MediumItalic-web.woff) format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-Bold-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-Bold-web.woff) format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TD TWK Everett';
+	src: url(../fonts/TWKEverett-BoldItalic-web.woff2) format('woff2'),
+		url(../fonts/TWKEverett-BoldItalic-web.woff) format('woff');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}

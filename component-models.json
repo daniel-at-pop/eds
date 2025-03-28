@@ -173,7 +173,10 @@
         "valueType": "string",
         "name": "logo",
         "label": "Logo",
-        "multi": false
+        "multi": false,
+        "classes": [
+          "test-a"
+        ]
       },
       {
         "component": "reference",

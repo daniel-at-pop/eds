@@ -1,0 +1,16 @@
+@mixin spacer($property, $direction, $value) {
+	@if $value == 0 {
+		#{$property}-#{$direction}: $value + px !important;
+	} @else {
+		#{$property}-#{$direction}: $value + px;
+	}
+}
+
+@mixin page-gutter() {
+	padding-inline: var(--kd-spacing-page-gutter);
+
+	// prevent double padding for nested grid components
+	.kd-spacing--page-gutter & {
+		padding-inline: 0;
+	}
+}

@@ -1,0 +1,19 @@
+@use 'breakpoints.scss';
+
+:root {
+	// --kd-root-max-width matches legacy $root-max-width
+	--kd-root-max-width: 2000px;
+	--kd-header-animation: 0.3s ease-out;
+	--kd-header-height-primary: 64px;
+	--kd-header-height-utility: 0px;
+	--kd-header-height: calc(var(--kd-header-height-utility) + var(--kd-header-height-primary));
+
+	@media (min-width: breakpoints.$bp-md) {
+		--kd-header-height-primary: 80px;
+		--kd-header-height-utility: 32px;
+	}
+}
+
+.header-is-collapsed {
+	--kd-header-height: var(--kd-header-height-primary);
+}

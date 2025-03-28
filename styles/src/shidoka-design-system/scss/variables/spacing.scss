@@ -1,0 +1,45 @@
+@use 'breakpoints.scss';
+
+$spacingInPixels: 0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 72, 80, 96, 120, 128, 144, 160, 192, 224, 240;
+$spacingDirections: top, right, bottom, left, block, inline;
+
+:root {
+	--kd-spacing-page-gutter: 16px;
+	--kd-spacing-page-gutter--negative: -16px;
+	--kd-spacing-typography-margin-bottom: 24px;
+	--kd-spacing-component-margin-bottom: 32px;
+	--kd-spacing-component-padding-top: 32px;
+	--kd-spacing-component-padding-bottom: 48px;
+	--kd-spacing-component-padding-top-small: 32px;
+	--kd-spacing-component-padding-bottom-small: 32px;
+
+	@each $pixelValue in $spacingInPixels {
+		$keyname: '--kd-spacing-' + $pixelValue;
+		#{$keyname}: #{$pixelValue + 'px'};
+	}
+
+	@media (min-width: breakpoints.$bp-md) {
+		--kd-spacing-page-gutter: 32px;
+		--kd-spacing-page-gutter--negative: -32px;
+		--kd-spacing-component-padding-top: 48px;
+		--kd-spacing-component-padding-bottom: 72px;
+		--kd-spacing-component-padding-top-small: 40px;
+		--kd-spacing-component-padding-bottom-small: 40px;
+	}
+
+	@media (min-width: breakpoints.$bp-lg) {
+		--kd-spacing-component-margin-bottom: 48px;
+		--kd-spacing-component-padding-top: 64px;
+		--kd-spacing-component-padding-bottom: 96px;
+	}
+
+	@media (min-width: breakpoints.$bp-xl) {
+		--kd-spacing-component-padding-top: 80px;
+		--kd-spacing-component-padding-bottom: 120px;
+	}
+
+	@media (min-width: breakpoints.$bp-max) {
+		--kd-spacing-component-padding-top: 96px;
+		--kd-spacing-component-padding-bottom: 144px;
+	}
+}
