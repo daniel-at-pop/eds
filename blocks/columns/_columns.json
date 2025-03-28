@@ -33,6 +33,24 @@
           "name": "rows",
           "value": "",
           "label": "Rows"
+        },
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "options": [
+            { "name": "White", "value": "kd-component-palette--white" },
+            { "name": "Darkstone", "value": "kd-component-palette--darkstone" },
+            { "name": "Spruce Dark", "value": "kd-component-palette--spruce-dark" },
+            { "name": "Spruce", "value": "kd-component-palette--spruce" },
+            { "name": "Dark Green", "value": "kd-component-palette--darkgreen" },
+            { "name": "Light Green", "value": "kd-component-palette--lightgreen" },
+            { "name": "Skye", "value": "kd-component-palette--skye" },
+            { "name": "Cloud", "value": "kd-component-palette--cloud" },
+            { "name": "Darkstone 10", "value": "kd-component-palette--darkstone-10" },
+            { "name": "Web Gray", "value": "kd-component-palette--webgray" },
+            { "name": "Cool Gray", "value": "kd-component-palette--coolgray" }
+          ]
         }
       ]
     }

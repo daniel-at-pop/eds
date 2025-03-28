@@ -1,3 +1,11 @@
 @import './scss/variables';
 @import './scss/mixins';
 @import './scss/utility';
+
+main > .section {
+  @extend .kd-spacing--component-padding-block;
+}
+
+main > .section > div {
+  @extend .kd-layout__content-container;
+}
