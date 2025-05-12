@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "articleCards",
+    "components": [
+      "articleCard"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"

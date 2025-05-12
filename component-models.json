@@ -118,6 +118,39 @@
     ]
   },
   {
+    "id": "articleCard",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "author",
+        "value": "",
+        "label": "Author",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "date",
+        "value": "",
+        "label": "Date",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
