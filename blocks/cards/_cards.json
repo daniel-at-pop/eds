@@ -30,21 +30,21 @@
         }
       }
     },
-      {
-        "title": "article",
-        "id": "article",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "resourceType": "core/franklin/components/block/v1/block/item",
-              "template": {
-                "name": "Article",
-                "model": "article"
-              }
+    {
+      "title": "article",
+      "id": "article",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Article",
+              "model": "article"
             }
           }
         }
       }
+    }
   ],
   "models": [
     {

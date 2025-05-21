@@ -20,15 +20,10 @@
     ]
   },
   {
-    "id": "articleCards",
-    "components": [
-      "article"
-    ]
-  },
-  {
     "id": "cards",
     "components": [
-      "card"
+      "card",
+      "article"
     ]
   },
   {
