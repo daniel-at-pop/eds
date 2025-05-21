@@ -29,7 +29,22 @@
           }
         }
       }
-    }
+    },
+      {
+        "title": "article",
+        "id": "article",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/block/v1/block/item",
+              "template": {
+                "name": "Article",
+                "model": "article"
+              }
+            }
+          }
+        }
+      }
   ],
   "models": [
     {
@@ -50,13 +65,47 @@
           "valueType": "string"
         }
       ]
+    },
+    {
+      "id": "article",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": true
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "author",
+          "value": "",
+          "label": "Author",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "date",
+          "value": "",
+          "label": "Date",
+          "valueType": "string"
+        }
+      ]
     }
   ],
   "filters": [
     {
       "id": "cards",
       "components": [
-        "card"
+        "card",
+        "article"
       ]
     }
   ]
