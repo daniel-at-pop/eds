@@ -16,15 +16,15 @@
         }
       },
       {
-        "title": "articleCard",
-        "id": "articleCard",
+        "title": "article",
+        "id": "article",
         "plugins": {
           "xwalk": {
             "page": {
               "resourceType": "core/franklin/components/block/v1/block/item",
               "template": {
-                "name": "articleCard",
-                "model": "articleCard"
+                "name": "article",
+                "model": "article"
               }
             }
           }
@@ -33,7 +33,7 @@
     ],
     "models": [
       {
-        "id": "articleCard",
+        "id": "article",
         "fields": [
           {
             "component": "reference",
@@ -70,7 +70,7 @@
       {
         "id": "articleCards",
         "components": [
-          "articleCard"
+          "article"
         ]
       }
     ]

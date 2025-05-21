@@ -1,4 +1,4 @@
-.articleCards > ul {
+.article-cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,20 +7,20 @@
   grid-gap: 24px;
 }
 
-.articleCards > ul > li {
+.article-cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
 }
 
-.articleCards .articleCards-card-body {
+.article-cards .article-cards-article-body {
   margin: 16px;
 }
 
-.articleCards .articleCards-card-image {
+.article-cards .article-cards-article-image {
   line-height: 0;
 }
 
-.articleCards > ul > li img {
+.article-cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;

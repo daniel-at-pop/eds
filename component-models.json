@@ -118,7 +118,7 @@
     ]
   },
   {
-    "id": "articleCard",
+    "id": "article",
     "fields": [
       {
         "component": "reference",
